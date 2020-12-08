@@ -19,7 +19,7 @@ stdproject {
 }
 
 subprojects {
-        version = '1.1.1'
+        version = '1.2.0'
 	apply plugin: 'org.anarres.stdmodule'
 	apply plugin: 'eclipse'
 	stdmodule {
@@ -38,7 +38,7 @@ subprojects {
 	sourceCompatibility = 1.7
 }
 
-version = '1.1.1'
+version = '1.2.0'
 
 project(':jarjar-testdata') {
 	dependencies {
@@ -63,6 +63,8 @@ project(':jarjar-testdata') {
 }
 
 project(':jarjar-core') {
+	apply plugin: 'org.anarres.stdplugin'
+
 	dependencies {
 		compile 'org.ow2.asm:asm-commons:8.0.1'
 		compile 'org.ow2.asm:asm-util:8.0.1'
